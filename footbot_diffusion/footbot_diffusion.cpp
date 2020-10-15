@@ -64,7 +64,6 @@ void CFootBotDiffusion::Init(TConfigurationNode& t_node) {
 void CFootBotDiffusion::ControlStep() {
    /* Get readings from proximity sensor */
    const CCI_FootBotProximitySensor::TReadings& tProxReads = m_pcProximity->GetReadings();
-   /* Sum them together */
    CVector2 cAccumulator;
 
    for(size_t i = 0; i < tProxReads.size(); i++) 
